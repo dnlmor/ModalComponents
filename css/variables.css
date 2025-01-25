@@ -1,8 +1,17 @@
+/* Global CSS Variables */
 :root {
-    --main-font-color: #58585b;
-    --main-font-alt: #6c757d;
-    --bg-color: #1C163A;
-    --primary-color: #BB34FB;
-    --secondary-color: #2cdb83;
-    --third-color: #fbab34;
-}
+    --primary-color: #4CAF50;
+    --secondary-color: #FFC107;
+    --third-color: #009688;
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --font-family: 'Arial', sans-serif;
+    --modal-bg-color: rgba(0, 0, 0, 0.7);
+    --modal-color: #fff;
+    --border-radius: 8px;
+    --transition-speed: 0.3s;
+    --padding: 10px;
+    --margin: 15px;
+    --image-size: 100%;
+  }
+  

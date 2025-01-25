@@ -1,22 +1,32 @@
-.eclipseElement {
-    filter: blur(300px);
-    width: 318px;
-    height: 318px;
+/* Eclipse Element */
+.eclipse-element {
+    width: 120px;
+    height: 120px;
+    background-color: var(--third-color);
+    border-radius: 50%;
     position: absolute;
-    left: 0;
-    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--primary-color);
+    animation: pulse 2s infinite;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-.eclipseElement.primary {
-    background-color: #cc68fa;
+.eclipse-element:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 }
 
-
-.eclipseElement.secondary {
-    background-color: var(--secondary-color)
-}
-
-.eclipseElement.third {
-    background-color: var(--third-color)
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
 }

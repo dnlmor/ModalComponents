@@ -1,13 +1,12 @@
-import { naveBar } from "./navBar.js"
+import { navBar } from './navBar.js';
 
 export const headerComp = () => {
-	const headerElement = document.createElement("header")
-
-	const title = document.createElement("h1")
-	title.style.textAlign = "center"
-	title.style.color = "white"
-	title.style.margin = "1em"
-	title.innerText = "This is a test title"
-
-	return headerElement
-}
+  const headerElem = document.createElement('header');
+  headerElem.style.display = 'flex';
+  headerElem.style.justifyContent = 'space-between';
+  headerElem.style.alignItems = 'center';
+  headerElem.style.padding = '10px';
+  headerElem.appendChild(navBar());
+  
+  return headerElem;
+};

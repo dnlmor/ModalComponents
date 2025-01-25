@@ -1,30 +1,18 @@
-const navStyle = {
-	display: "flex",
-	alignItems: "center",
-	justifyContent: "space-between",
-	padding: "1em",
-}
-
-export const naveBar = () => {
-	const navElement = document.createElement("nav")
-	navElement.classList.add("navElement")
-
-	// Apply headerStyle to headerElement
-	Object.entries(navStyle).forEach(([key, value]) => {
-		navElement.style[key] = value
-	})
-
-	const link = document.createElement("a")
-
-	const img = new Image()
-	img.src = "../assets/logo.svg"
-	img.setAttribute("alt", "logo")
-
-	navElement.appendChild(img)
-
-	link.setAttribute("href", "#")
-	link.innerText = "Home"
-
-	navElement.appendChild(link)
-	return navElement
-}
+export const navBar = () => {
+	const navElem = document.createElement('nav');
+	const ulElem = document.createElement('ul');
+	
+	// Create menu items
+	const menuItems = ['Home'];
+	menuItems.forEach(item => {
+	  const liElem = document.createElement('li');
+	  const aElem = document.createElement('a');
+	  aElem.textContent = item;
+	  aElem.href = '#';
+	  liElem.appendChild(aElem);
+	  ulElem.appendChild(liElem);
+	});
+	
+	navElem.appendChild(ulElem);
+	return navElem;
+  };  
